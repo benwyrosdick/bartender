@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Button, Stack, Card, Tabs, Tab } from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import Stack from 'react-bootstrap/Stack'
+import Card from 'react-bootstrap/Card'
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 
 import { emailRecipe } from './sendEmail'
 
