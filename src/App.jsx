@@ -35,7 +35,7 @@ const App = () => {
           <h2>
             {`${drinks.length} drink${drinks.length === 1 ? '' : 's'} found`}
           </h2>
-          <Row className="g-4">
+          <Row xs={1} sm={2} lg={3} className="g-4">
             {drinks.map((drink) => (
               <Col key={drink.id}>
                 <DrinkCard drink={drink} link />
