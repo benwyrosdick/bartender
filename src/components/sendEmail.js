@@ -1,8 +1,13 @@
 const emailRecipe = async (drink) => {
-  console.log({ drink, token: process.env.ENVELOOP_API_TOKEN })
-  if (!process.env.REACT_APP_ENVELOOP_API_TOKEN) return
+  const { 
+    REACT_APP_ENVELOOP_API_TOKEN: apiToken,
+    REACT_APP_ENVELOOP_API_URL: apiUrl = 'https://staging-api.enveloop.net',
+  } = process.env
 
-  const authToken = `Token ${process.env.REACT_APP_ENVELOOP_API_TOKEN}`
+  console.log({ drink, apiToken })
+  if (!apiToken) return
+
+  const authToken = `Token ${apiToken}`
 
   const data = {
     to: 'ben.wyrosdick@gmail.com',
@@ -17,7 +22,7 @@ const emailRecipe = async (drink) => {
     },
   }
 
-  await fetch('https://staging-api.enveloop.net/templates/recipe', {
+  const res = await fetch(`${apiUrl}/templates/recipe`, {
     headers: {
       Authorization: authToken,
       'Content-Type': 'application/json',
@@ -26,7 +31,7 @@ const emailRecipe = async (drink) => {
     body: JSON.stringify(data),
   })
 
-  alert('email sent')
+  return res
 }
 
 export {
