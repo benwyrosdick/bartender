@@ -1,8 +1,8 @@
 const emailRecipe = async (drink) => {
   console.log({ drink, token: process.env.ENVELOOP_API_TOKEN })
-  if (!process.env.ENVELOOP_API_TOKEN) return
+  if (!process.env.REACT_APP_ENVELOOP_API_TOKEN) return
 
-  const authToken = `Token ${process.env.ENVELOOP_API_TOKEN}`
+  const authToken = `Token ${process.env.REACT_APP_ENVELOOP_API_TOKEN}`
 
   const data = {
     to: 'ben.wyrosdick@gmail.com',
