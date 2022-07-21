@@ -1,7 +1,7 @@
 const emailRecipe = async (drink) => {
   const { 
     REACT_APP_ENVELOOP_API_TOKEN: apiToken,
-    REACT_APP_ENVELOOP_API_URL: apiUrl = 'https://staging-api.enveloop.net',
+    REACT_APP_ENVELOOP_API_URL: apiUrl = 'https://api.enveloop.com',
   } = process.env
 
   console.log({ drink, apiToken })
