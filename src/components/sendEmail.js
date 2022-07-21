@@ -11,7 +11,7 @@ const emailRecipe = async (drink) => {
 
   const data = {
     to: 'ben.wyrosdick@gmail.com',
-    from: 'recipe@enveloop.net',
+    from: 'ben@wyrosdick.com',
     subject: `Your recipe for ${drink.name}`,
     userVariables: {
       drinkName: drink.name,
