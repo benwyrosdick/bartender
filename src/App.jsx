@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
+import './App.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 

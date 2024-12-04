@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import Button from 'react-bootstrap/Button'
 import Stack from 'react-bootstrap/Stack'
@@ -69,15 +68,6 @@ const DrinkCard = ({ drink, link }) => {
       </Card.Body>
     </Card>
   )
-}
-
-DrinkCard.propTypes = {
-  drink: PropTypes.object.isRequired,
-  link: PropTypes.bool,
-}
-
-DrinkCard.defaultProps = {
-  link: false,
 }
 
 export { DrinkCard }
