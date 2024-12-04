@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Header = ({ siteTitle }) => (
   <header className="bg-info mb-4">
     <div
